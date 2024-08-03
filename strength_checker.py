@@ -6,6 +6,8 @@ print(result)
 def password_strength(password):
     if len(password) < 8:
         return "weak"
+    elif len(password) < 2:
+        return "Too weak"
     elif re.search(r"[a-z]", password) and re.search(r"[A-Z]", password) and re.search(r"\d", password):
         return "strong"
     else:
